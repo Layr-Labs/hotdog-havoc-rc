@@ -3,7 +3,7 @@ config:
   project:
     name: hotdog-havoc-rc
     version: 0.1.0
-    context: devnet
+    context: "devnet"
     project_uuid: 5987eb52-1f03-4743-89cb-63a80df78e63
     telemetry_enabled: true
     templateBaseUrl: https://github.com/Layr-Labs/hourglass-avs-template
