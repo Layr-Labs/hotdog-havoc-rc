@@ -1,12 +1,12 @@
-version: 0.0.3
 config:
-  project:
-    name: hotdog-havoc-rc
-    version: 0.1.0
-    context: "devnet"
-    project_uuid: 5987eb52-1f03-4743-89cb-63a80df78e63
-    telemetry_enabled: true
-    templateBaseUrl: https://github.com/Layr-Labs/hourglass-avs-template
-    templateVersion: v0.0.25
-    templatelanguage: go
-    templateLanguage: "go"
+    project:
+        context: devnet
+        name: hotdog-havoc-rc
+        project_uuid: 5987eb52-1f03-4743-89cb-63a80df78e63
+        telemetry_enabled: true
+        templateBaseUrl: https://github.com/Layr-Labs/hourglass-avs-template
+        templateLanguage: go
+        templateVersion: v0.0.29
+        templatelanguage: go
+        version: 0.1.0
+version: 0.0.3

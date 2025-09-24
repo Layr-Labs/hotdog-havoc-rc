@@ -37,7 +37,11 @@ contract DeployMyL2Contracts is Script {
         vm.startBroadcast(context.deployerPrivateKey);
         console.log("Deployer address:", vm.addr(context.deployerPrivateKey));
 
-       context.taskHook.setTaskMailbox(address(context.taskMailbox));
+        //TODO: Implement custom L2 contracts deployment
+        // CustomContractL2 customContractL2 = new CustomContractL2();
+        // console.log("CustomContractL2 deployed to:", address(customContractL2));
+        HelloWorldL2 helloWorldL2 = new HelloWorldL2();
+        console.log("HelloWorldL2 deployed to:", address(helloWorldL2));
 
         vm.stopBroadcast();
 
@@ -49,9 +53,10 @@ contract DeployMyL2Contracts is Script {
         vm.stopBroadcast();
 
         //TODO: Write to output file
-        Output[] memory outputs = new Output[](0);
+        Output[] memory outputs = new Output[](1);
         // outputs[0] = Output({name: "CustomContractL2", contractAddress: address(customContractL2)});
         // _writeOutputToJson(environment, outputs);
+        outputs[0] = Output({name: "HelloWorldL2", contractAddress: address(helloWorldL2)});
         _writeOutputToJson(environment, outputs);
     }
 
